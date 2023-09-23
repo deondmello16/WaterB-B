@@ -1,0 +1,38 @@
+<%  layout('layout/boilerplate') %>
+    <h1>All the WaterB&B</h1>
+
+    <a class ="btn btn-primary" href="campground/new">Add New Places</a>
+
+
+        <% for( let i = 0; i < camps.length; i++ ) { %>
+            <div class="card m-3 border border-light">
+                <div class=" row" >
+                <!-- <div class="card mt-5 p-auto row" style="width: 18rem;"> -->
+                    <div class="col-md-4">
+                        <img src="<%= camps[i].image %>" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="/campground/<%= camps[i]._id %>"><%= camps[i].title %></a></h5>
+                            <h5 class="card-title"><%= camps[i].location %></h5>
+                            <h5 class="card-title">$<%= camps[i].price %>/hour</h5>
+                            <p class="card-text"><%= camps[i].description %></p>
+                            <p><strong>Owner : </strong><%= camps[i].author.username %></p>
+                        </div>
+                        
+                    </div>
+                    <!-- <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    </ul> -->
+                    <!-- <div class="card-body"> -->
+                    <!-- <a href="/campground/<%= camps[i]._id %>/edit">EDIT</a> -->
+                    <!-- <form action="/campground/<%= camps[i].id %>?_method=DELETE" method="post">
+                        <button type="submit">DELETE</button>
+                    </form> -->
+                </div>
+              </div>
+            </div>
+        <% } %>
+

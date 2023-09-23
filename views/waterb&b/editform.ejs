@@ -1,0 +1,47 @@
+<%  layout('layout/boilerplate') %>
+    
+
+    <form class=" g-3 needs-validation" novalidate action="/campground/<%= camp._id %>?=&_method=PATCH" method="post">
+        <div action="/campground/<%= camp._id %>?=&_method=PATCH" method="post" class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input required class="form-control" type="text" name="campground[title]" id="title" placeholder="<%= camp.title %>" value="<%= camp.title %>" aria-describedby="emailHelp">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input required class="form-control" type="text" name="campground[location]" id="location" placeholder="<%= camp.location %>" value="<%= camp.location %>">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL</label>
+            <input type="text"  name="campground[image]" required class="form-control" id="image" value="<%= camp.image %>" aria-describedby="Image URL">
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="price" class = "form-label">Price</label>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">$</span>
+                <input id="price" type="number" required name="campground[price]" class="form-control" placeholder="0.00" value="<%= camp.price %>" aria-label="" aria-describedby="addon-wrapping">
+                
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="descrpition" class="form-label">Description</label>
+            <input name="campground[description]" type="text" height="30px" required required class="form-control" id="descrpition" value="<%= camp.description %>" aria-describedby="Description">
+        </div>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+
