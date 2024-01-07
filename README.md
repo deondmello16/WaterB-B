@@ -1,6 +1,5 @@
-# YelpCamp
-
-YelpCamp is a full-stack website project enabling users to create and review campgrounds. Account creation is necessary for reviewing or adding campgrounds. This project is a part of Colt Steele's web dev bootcamp course on Udemy.
+# WaterB&B
+WaterB&B is a full-stack website project enabling users to create and review campgrounds. Account creation is necessary for reviewing or adding campgrounds. This project is a part of Colt Steele's web dev bootcamp course on Udemy.
 
 ## Project Overview
 
