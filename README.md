@@ -11,7 +11,7 @@ WaterB&B is a full-stack website project enabling users to create and review cam
 - **Viewing:** All users can view camps and reviews without signing up.
 - **Editing:** Users need to log in to modify campground details or comments.
 - **Permissions:** Users can only edit/delete their added campgrounds and comments.
-- **Persistence:** Data is stored in the Amazon cloud.
+- **Persistence:** Data is stored in the MongoDB and Cloudinary (Images).
 
 ## Technologies Used
 
